@@ -41,7 +41,7 @@ angular.module('starter.controllers', [])
   };
 })
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-.controller('PlaylistsCtrl', function($scope,$http)
+.controller('ListaOfferteCtrl', function($scope,$http)
 {
   var link = "http://trovalavoro.altervista.org/select.php";
 
@@ -60,9 +60,9 @@ angular.module('starter.controllers', [])
     });
 })
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-.controller('PlaylistCtrl', function($scope, $stateParams, $http)
+.controller('LavoroCtrl', function($scope, $stateParams, $http)
 {
-  $scope.lin = window.location.href.substring(38,43);
+  $scope.lin = $stateParams.lavoroId;
 
   var link = "http://trovalavoro.altervista.org/select.php";
 
