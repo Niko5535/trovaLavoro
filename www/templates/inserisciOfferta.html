@@ -1,34 +1,36 @@
-<ion-view view-title="Inserisci l'offerta">
-  <ion-content>
 
+<ion-view view-title="Inserisci l'offerta">
+
+<form method="get" action="">
+  <ion-content>
 <div class="list">
   <label class="item item-input item-stacked-label">
     <span class="input-label">Tipologia di impiego</span>
-    <input type="text" placeholder="Inserisci la tipologia di impiego">
+    <input type="text" placeholder="Inserisci la tipologia di impiego" name="tipologia_impiego">
   </label>
   <label class="item item-input item-stacked-label">
     <span class="input-label">Descrizione del lavoro</span>
-    <input type="text" placeholder="Inserisci una descrizione ">
+    <input type="text" placeholder="Inserisci una descrizione " name="descrizione">
   </label>
 
   <label class="item item-input item-stacked-label">
     <span class="input-label">Retribuzione mensile :</span>
-    <input type="text" placeholder="Inserisci la retribuzione mensile" >
+    <input type="text" placeholder="Inserisci la retribuzione mensile" name="stipendio" >
   </label>
 
   <label class="item item-input item-stacked-label">
     <span class="input-label">Nome dell'azienda</span>
-    <input type="text" placeholder="Inserisci il nome dell'azienda" >
+    <input type="text" placeholder="Inserisci il nome dell'azienda" name="nome_azienda" >
   </label>
 
   <label class="item item-input item-stacked-label">
     <span class="input-label">Partita IVA dell'azienda</span>
-    <input type="text"  placeholder="Inserisci la partita IVA dell'azienda" maxlength="11" >
+    <input type="text"  placeholder="Inserisci la partita IVA dell'azienda" maxlength="11" name="patita_iva" >
   </label>
 
   <label class="item item-input item-stacked-label">
     <span class="input-label">Email</span>
-    <input type="text" placeholder="Inserisci un'email" >
+    <input type="text" placeholder="Inserisci un'email" name="email" >
   </label>
 
 
@@ -155,7 +157,7 @@
 </label>
 
 </div>
-<button class="button button-block button-positive">Inserisci!</button>
+<button class="button button-block button-positive" type="submit">Inserisci!</button>
 
 
 </ion-content>
