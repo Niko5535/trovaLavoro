@@ -1,0 +1,12 @@
+<ion-view view-title="Lista offerte di lavoro">
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="x in myWelcome" href="#/app/listaOfferte/{{x.id_offerta}}">
+
+        <h2 id="titoloLavoro">{{x.tipologia_lavoro}}</h2><br>
+        Descrizione: {{x.descrizione}} <br>
+        Data: {{x.data}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
