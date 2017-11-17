@@ -32,17 +32,14 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     controller: 'AppCtrl'
   })
 
-  .state('app.search', {
-    url: '/search',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/search.html'
+  .state('app.home', {
+      url: '/home',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/home.html'
+        }
       }
-    }
-  })
-
-
-        // LISTA OFFERTE
+    })
     .state('app.listaOfferte', {
       url: '/listaOfferte',
       views: {
@@ -53,8 +50,6 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     })
 
-
-    // INSERISCI OFFERTA
     .state('app.inserisciOfferta', {
       url: '/inserisciOfferta',
       views: {
@@ -65,20 +60,6 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     })
 
-    // REGISTRA AZIENDA
-    .state('app.registrazioneAzienda', {
-      url: '/registrazioneAzienda',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/registrazioneAzienda.html',
-          controller: 'registrazioneAziendaCtrl'
-        }
-      }
-    })
-
-
-
-
   .state('app.single', {
     url: '/listaOfferte/:lavoroId',
     views: {
@@ -87,7 +68,18 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         controller: 'LavoroCtrl'
       }
     }
+  })
+
+  .state('app.registrazione', {
+    url: '/registrazione',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/registrazione.html',
+        controller: 'RegistrazioneCtrl'
+      }
+    }
   });
+
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/home');
 });
