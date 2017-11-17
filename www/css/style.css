@@ -27,10 +27,16 @@
   color: #ffffff;
 }
 
+
 a .item-icon-right {
     color: inherit;
     text-decoration: none;
     border: transparent;
     padding: 1%;
-    margin-right: -15%;
+    margin-right: -15%;}
+
+#button{
+  padding-left: : 10px;
+
+
 }
