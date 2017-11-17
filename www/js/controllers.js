@@ -78,4 +78,8 @@ angular.module('starter.controllers', [])
 {
   $scope.lin = $stateParams.lavoroId;
   $scope.offerte = Offerte.getOfferte();
+})
+
+.controller('inserisciOffertaCtrl', function($scope, $stateParams, $http , Offerte)
+{
 });
