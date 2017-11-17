@@ -32,20 +32,11 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     controller: 'AppCtrl'
   })
 
-  .state('app.search', {
-    url: '/search',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/search.html'
-      }
-    }
-  })
-
-  .state('app.browse', {
-      url: '/browse',
+  .state('app.home', {
+      url: '/home',
       views: {
         'menuContent': {
-          templateUrl: 'templates/browse.html'
+          templateUrl: 'templates/home.html'
         }
       }
     })
@@ -77,7 +68,18 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         controller: 'LavoroCtrl'
       }
     }
+  })
+
+  .state('app.registrazione', {
+    url: '/registrazione',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/registrazione.html',
+        controller: 'RegistrazioneCtrl'
+      }
+    }
   });
+
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/listaOfferte');
+  $urlRouterProvider.otherwise('/app/home');
 });
