@@ -1,5 +1,18 @@
 angular.module('starter.controllers', [])
 
+.factory('Offerte', function() {
+  var offerte = {};
+  return{
+    getOfferte:function(){
+      return offerte;
+    },
+    setOfferte: function(param)
+    {
+      offerte = param;
+    }
+  };
+})
+
 .controller('AppCtrl', function($scope, $ionicModal, $timeout) {
 
   // With the new view caching in Ionic, Controllers are only called
@@ -41,7 +54,7 @@ angular.module('starter.controllers', [])
   };
 })
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-.controller('ListaOfferteCtrl', function($scope,$http)
+.controller('ListaOfferteCtrl', function($scope,$http,Offerte)
 {
   var link = "http://trovalavoro.altervista.org/select.php";
 
@@ -53,30 +66,16 @@ angular.module('starter.controllers', [])
       }
   }).then(function(response)
   {
+      Offerte.setOfferte(response.data.offerte);
       $scope.myWelcome = response.data.offerte;
   }).catch(function(error)
     {
-      cosole.log(error);
+      console.log(error);
     });
 })
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-.controller('LavoroCtrl', function($scope, $stateParams, $http)
+.controller('LavoroCtrl', function($scope, $stateParams, $http , Offerte)
 {
   $scope.lin = $stateParams.lavoroId;
-
-  var link = "http://trovalavoro.altervista.org/select.php";
-
-  $http.get(link,
-    {
-      params:
-      {
-        tabella: 'offerte'
-      }
-  }).then(function(response)
-  {
-      $scope.myWelcome = response.data.offerte;
-  }).catch(function(error)
-    {
-      cosole.log(error);
-    });
+  $scope.offerte = Offerte.getOfferte();
 });
