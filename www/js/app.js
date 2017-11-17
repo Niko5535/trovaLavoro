@@ -59,6 +59,16 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     })
 
+    .state('app.inserisciOfferta', {
+      url: '/inserisciOfferta',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/inserisciOfferta.html',
+          controller: 'inserisciOffertaCtrl'
+        }
+      }
+    })
+
   .state('app.single', {
     url: '/listaOfferte/:lavoroId',
     views: {
