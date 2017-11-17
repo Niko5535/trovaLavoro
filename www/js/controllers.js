@@ -82,4 +82,9 @@ angular.module('starter.controllers', [])
 
 .controller('inserisciOffertaCtrl', function($scope, $stateParams, $http , Offerte)
 {
-});
+})
+
+.controller('RegistrazioneCtrl', function($scope,  $http )
+{
+
+})
