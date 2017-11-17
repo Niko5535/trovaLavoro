@@ -82,6 +82,10 @@ angular.module('starter.controllers', [])
 
 .controller('inserisciOffertaCtrl', function($scope, $stateParams, $http , Offerte)
 {
+  function inserisci()
+  {
+    $http.post('http://trovalavoro.altervista.org/insert.php?tabella=offerte&tipologia_lavoro=fnfnrf&descrizione=frrgr&stipendio=4').then();
+  }
 })
 
 .controller('RegistrazioneCtrl', function($scope,  $http )
