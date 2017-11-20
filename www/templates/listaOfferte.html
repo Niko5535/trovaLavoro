@@ -1,48 +1,28 @@
-<ion-view view-title="Lista offerte di lavoro" >
+<ion-view view-title="Lista offerte di lavoro">
 
-  <ion-content id="tuodiv">
+  <ion-content class="imgLista">
 
-
-          <!-- <p><input type="text" ng-model="test"></p> -->
-          <div class="list">
-
-
-        <!-- <div class="input-label">
-          Lightsaber
-        </div> -->
-
-
-<!--
-        <select id="selectid">
-          <option>Blue</option>
-          <option selected>Green</option>
-          <option>Red</option>
-        </select>
-        <select id="selectid" >
-          <option>Blue</option>
-          <option selected>Green</option>
-          <option>Red</option>
-        </select>
-      </label> -->
-
+    <div class="bar bar-header item-input-inset">
+        <label class="item-input-wrapper">
+          <i class="icon ion-ios-search placeholder-icon"></i>
+          <input type="search" placeholder="Search"  ng-model="cerca">
+        </label>
+        <button class="button button-clear">
+          Cancel
+        </button>
     </div>
 
-                                  <!-- coral -->
-      <!-- <div style="background-color:white;" >  Categoria lavoro:      <input  id="text" ng-model="test" name="searchForCategory" placeholder="muratore"></div>
-      <div style="background-color:white;">  Data e ora annuncio: <input id="text" ng-model="tests" name="searchForDate" placeholder="2017-11-15 h15:00"></div>
-      <div style="background-color:white;">  Dove trovare Lavoro:      <input id="text" ng-model="testsx" name="searchForLocality" placeholder="Milano"></div> -->
-
     <ion-list >
-
-
-      <ion-item id="divliste" ng-repeat="x in myWelcome | filter :test" href="#/app/listaOfferte/{{x.id_offerta}};" ng-repeat="x in myWelcome | filter :tests"  >
-
-
-
-
+      <ion-item id="divliste" ng-repeat="x in myWelcome | filter :cerca" href="#/app/listaOfferte/{{x.id_offerta}};">
         <h2 id="titoloLavoro">{{x.tipologia_lavoro}}</h2><br>
-    <div>  <p class="serif"> Descrizione:</p> <p class="Sans-serif">{{x.descrizione}}</p> </div>
-      <div> <p>  <p class="serif">Data:</p>  <p class="Sans-serif_1">{{x.data}}</p> </div>
+        <div>
+          <p class="serif"> Descrizione:</p>
+          <p class="Sans-serif">{{x.descrizione}}</p>
+        </div>
+        <div>
+          <p class="serif">Data:</p>
+          <p class="Sans-serif_1">{{x.data}}</p>
+        </div>
       </ion-item>
     </ion-list>
   </ion-content>
