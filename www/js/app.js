@@ -70,12 +70,12 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   })
 
-  .state('app.registrazione', {
-    url: '/registrazione',
+  .state('app.registrazioneAzienda', {
+    url: '/registrazioneAzienda',
     views: {
       'menuContent': {
-        templateUrl: 'templates/registrazione.html',
-        controller: 'RegistrazioneCtrl'
+        templateUrl: 'templates/registrazioneAzienda.html',
+        controller: 'registrazioneAziendaCtrl'
       }
     }
   });

@@ -1,5 +1,66 @@
-<ion-view view-title="Lista offerte di lavoro">
+<ion-view view-title="Lista offerte di lavoro" >
+
+  <ion-content id="tuodiv">
+
+
+          <!-- <p><input type="text" ng-model="test"></p> -->
+          <div class="list">
+
+
+        <!-- <div class="input-label">
+          Lightsaber
+        </div> -->
+
+
+<!--
+        <select id="selectid">
+          <option>Blue</option>
+          <option selected>Green</option>
+          <option>Red</option>
+        </select>
+        <select id="selectid" >
+          <option>Blue</option>
+          <option selected>Green</option>
+          <option>Red</option>
+        </select>
+      </label> -->
+
+    </div>
+
+                                  <!-- coral -->
+      <!-- <div style="background-color:white;" >  Categoria lavoro:      <input  id="text" ng-model="test" name="searchForCategory" placeholder="muratore"></div>
+      <div style="background-color:white;">  Data e ora annuncio: <input id="text" ng-model="tests" name="searchForDate" placeholder="2017-11-15 h15:00"></div>
+      <div style="background-color:white;">  Dove trovare Lavoro:      <input id="text" ng-model="testsx" name="searchForLocality" placeholder="Milano"></div> -->
+
+    <ion-list >
+
+
+      <ion-item id="divliste" ng-repeat="x in myWelcome | filter :test" href="#/app/listaOfferte/{{x.id_offerta}};" ng-repeat="x in myWelcome | filter :tests"  >
+
+
+
+
+        <h2 id="titoloLavoro">{{x.tipologia_lavoro}}</h2><br>
+    <div>  <p class="serif"> Descrizione:</p> <p class="Sans-serif">{{x.descrizione}}</p> </div>
+      <div> <p>  <p class="serif">Data:</p>  <p class="Sans-serif_1">{{x.data}}</p> </div>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
+
+
+<!-- ng-repeat="x in names | filter : 'm'" -->
+<!-- <div class="list list-inset">
+  <label class="item item-input">
+    <i class="icon ion-search placeholder-icon"></i>
+    <input type="text" placeholder="Search">
+  </label>
+</div> -->
+
+
+<!-- <ion-view view-title="Lista offerte di lavoro">
   <ion-content>
+
     <ion-list>
       <ion-item ng-repeat="x in myWelcome" href="#/app/listaOfferte/{{x.id_offerta}}">
 
@@ -9,4 +70,4 @@
       </ion-item>
     </ion-list>
   </ion-content>
-</ion-view>
+</ion-view> -->

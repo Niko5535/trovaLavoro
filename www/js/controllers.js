@@ -56,7 +56,7 @@ angular.module('starter.controllers', [])
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 .controller('ListaOfferteCtrl', function($scope,$http,Offerte)
 {
-  var link = "http://trovalavoro.altervista.org/select.php";
+  var link = "http://company.altervista.org/select.php";
 
   $http.get(link,
     {
@@ -88,7 +88,11 @@ angular.module('starter.controllers', [])
   }
 })
 
-.controller('RegistrazioneCtrl', function($scope,  $http )
+.controller('registrazioneAziendaCtrl', function($scope, $stateParams, $http )
 {
-
+  function inserisci()
+  {
+    $http.post('http://trovalavoro.altervista.org/insert.php?').then();
+    //tabella=aziende&nome_azienda=prova1&descrizione=prova1&sede=lecce&partita_iva=12345678912
+  }
 })
