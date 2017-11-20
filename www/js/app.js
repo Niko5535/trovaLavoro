@@ -33,20 +33,31 @@ angular.module('starter', ['ionic', 'starter.controllers'])
   })
 
   .state('app.home', {
-      url: '/home',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/home.html'
-          //controller: 'HomeCtrl'
-        }
+    url: '/home',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/home.html',
+        controller: 'HomeCtrl'
       }
-    })
+    }
+  })
+
     .state('app.listaOfferte', {
       url: '/listaOfferte',
       views: {
         'menuContent': {
           templateUrl: 'templates/listaOfferte.html',
           controller: 'ListaOfferteCtrl'
+        }
+      }
+    })
+
+    .state('app.laMiaAzienda', {
+      url: '/laMiaAzienda',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/laMiaAzienda.html',
+          controller: 'AziendaCtrl'
         }
       }
     })
