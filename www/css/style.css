@@ -84,6 +84,7 @@ color: white;
     color: #fff;
     border-radius: 25px;
 
+
 }
 .button.button-assertive
 {
@@ -127,6 +128,7 @@ color: white;
     background-color: #5b84e5;
     color: #fff;
     border-radius: 25px;
+    text-decoration: none;
 }
 .button.button-assertive
 {
