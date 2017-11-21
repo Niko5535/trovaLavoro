@@ -47,3 +47,4 @@ www/templates/registrazioneAzienda.html
 *.html
 *.js
 *.css
+www/templates/menu.html
