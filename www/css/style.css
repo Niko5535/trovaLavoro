@@ -13,6 +13,11 @@
 }
 
 /*Titolo barra centrale personalizzazione*/
+
+i{
+font-size: 28px;
+
+}
 .bar .title{
   font-size: 23px;
     font-family: Franklin Gothic ;
@@ -43,12 +48,7 @@
 }
 
 
-a .item-icon-right {
-    color: inherit;
-    text-decoration: none;
-    border: transparent;
-    padding: 1%;
-    margin-right: -15%;}
+
 
 #button{
   padding-left: : 10px;
