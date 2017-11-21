@@ -14,10 +14,28 @@
 
 /*Titolo barra centrale personalizzazione*/
 
-i{
+i{ /*Icone menu*/
 font-size: 28px;
 
 }
+
+/* Barra inferiore*/
+.tabs{
+  color: #203360;
+
+
+}
+.tabs-striped .tabs{
+  background-color: white;
+}
+
+.tabs-striped .tab-item.tab-item-active, .tabs-striped .tab-item.active, .tabs-striped .tab-item.activated{
+border-color: #203360;
+
+}
+
+/*Fine barra inferiore */
+
 .bar .title{
   font-size: 23px;
     font-family: Franklin Gothic ;
