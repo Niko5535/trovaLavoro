@@ -31,5 +31,19 @@ $RECYCLE.BIN/
 .DS_Store
 Thumbs.db
 UserInterfaceState.xcuserstate
+<<<<<<< HEAD
+www/js/app.js
+*.js
+www/js/controllers.js
+www/templates/home.html
+www/templates/laMiaAzienda.html
+www/templates/Login.html
+*.html
+www/templates/menu.html
+=======
 www/js/controllers.js
 www/templates/registrazioneAzienda.html
+>>>>>>> 110b7fe319bf6ecea3b21fd301567751ead205f1
+*.html
+*.js
+*.css
