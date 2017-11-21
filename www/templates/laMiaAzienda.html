@@ -1,13 +1,41 @@
-<ion-view view-title="{{myWelcome[id_azienda -1].nome_azienda}}">
+<ion-view view-title="{{myWelcome[id_azienda -1].nome_azienda}}" style="background-color:white">
 
-  <ion-content class="imgLista">
-    {{myWelcome[id_azienda - 1].nome_azienda}}  <br>
-    {{myWelcome[id_azienda - 1].descrizione}}  <br>
-    {{myWelcome[id_azienda - 1].sede}}  <br>
-    {{myWelcome[id_azienda - 1].partita_iva}}  <br>
-    {{myWelcome[id_azienda - 1].email_azienda}}  <br>
-    {{myWelcome[id_azienda - 1].recapito_aziendale}}
-    <h1>{{id_azienda}}</h1>
+  <ion-content>
+
+    <div  class="sinistra">
+<br>
+
+
+
+  <p>  Nome azienda : <a href="#" style="float:right;">Modifica </a>   <br>
+    <br><i>{{myWelcome[id_azienda - 1].nome_azienda}}</i>   </p><br>
+
+<p>Descrizione : <a href="#" style="float:right;">Modifica </a>   <br>
+<br>  <i>  {{myWelcome[id_azienda - 1].descrizione}}</i>   </p><br>
+
+  <p>Sede :  <a href="#" style="float:right;">Modifica </a>   <br>
+<br>  <i>  {{myWelcome[id_azienda - 1].sede}} </i> </p><br>
+
+<p>Partita Iva :   <a href="#" style="float:right;">Modifica </a>   <br>
+<br>  <i>   {{myWelcome[id_azienda - 1].partita_iva}}</i>  </p><br>
+
+<p>Email aziendale:   <a href="#" style="float:right;">Modifica </a>   <br>
+<br>  <i> {{myWelcome[id_azienda - 1].email_azienda}}</i>   </p><br>
+
+<p>Recapito aziendale : <a href="#" style="float:right;">Modifica </a>   <br>
+<br>  <i>  {{myWelcome[id_azienda - 1].recapito_aziendale}}</i>  </p><br>
+
+  <h1>ID: {{id_azienda}}</h1>
+
+</div>
+
+
+
+
+</div>
+
+<div style="clear:both;"></div>
+
   </ion-content>
   <div class="tabs-striped tabs-icon-top">
     <div class="tabs">

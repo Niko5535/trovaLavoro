@@ -103,6 +103,27 @@ color: white;
        background-size: cover;
    }
 
+
+.sinistra{
+font-weight: bold;
+  font-size: 25px;
+  float: left;
+    width: 100%;
+
+
+}
+.sinistra i{
+  font-weight: normal;
+  
+}
+
+
+
+
+
+
+
+
 .button.button-positive {
     border-color: transparent;
     background-color: #5b84e5;
