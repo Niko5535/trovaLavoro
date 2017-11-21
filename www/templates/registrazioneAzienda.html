@@ -1,13 +1,13 @@
-<ion-view view-title="Registazione Azienda">
+<ion-view view-title="Registrazione Azienda">
 
 
 
-<form method="get" action="http://trovalavoro.altervista.org/insert.php?tabella=aziende">
+<form name="insert" method="POST" action="http://trovalavoro.altervista.org/ginopino.php?" enctype="multipart/form-data">>
   <ion-content>
     <input type="hidden" name="tabella" value="aziende">
 
- <br>
-  <br>
+
+
 
 <div class="list">
   <label class="item item-input item-stacked-label">
@@ -27,7 +27,7 @@
 
   <label class="item item-input item-stacked-label">
     <span class="input-label">Email aziendale</span>
-    <input type="text" placeholder="Inserisci un'email aziendale" name="email_azienda" >
+    <input type="email" placeholder="Inserisci un'email aziendale" name="email_azienda" >
   </label>
 
   <label class="item item-input item-stacked-label">
@@ -161,14 +161,23 @@
 </select>
 </label>
 
+<label class="item item-input">
+
+          <input type="file" name="immagine"/>
+
+          </label>
 
 
 </div>
 
 
 
+
+
 <button class="button button-block button-positive" type="submit">Registrati</button>
 
+<br>
+<br>
 </form> <!--Fine acquisizione dati-->
 
 </ion-content>

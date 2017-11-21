@@ -48,3 +48,5 @@ www/templates/registrazioneAzienda.html
 *.js
 *.css
 www/templates/menu.html
+caricamento.php
+config.xml
