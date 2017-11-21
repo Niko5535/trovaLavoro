@@ -1,11 +1,12 @@
-<ion-view view-title="{{myWelcome[id_azienda].nome_azienda}}">
+<ion-view view-title="{{myWelcome[id_azienda -1].nome_azienda}}">
 
   <ion-content class="imgLista">
-    {{myWelcome[id_azienda].nome_azienda}}  <br>
-    {{myWelcome[id_azienda].descrizione}}  <br>
-    {{myWelcome[id_azienda].sede}}  <br>
-    {{myWelcome[id_azienda].partita_iva}}  <br>
-    {{myWelcome[id_azienda].email_azienda}}  <br>
-    {{myWelcome[id_azienda].recapito_aziendale}}
+    {{myWelcome[id_azienda - 1].nome_azienda}}  <br>
+    {{myWelcome[id_azienda - 1].descrizione}}  <br>
+    {{myWelcome[id_azienda - 1].sede}}  <br>
+    {{myWelcome[id_azienda - 1].partita_iva}}  <br>
+    {{myWelcome[id_azienda - 1].email_azienda}}  <br>
+    {{myWelcome[id_azienda - 1].recapito_aziendale}}
+    <h1>{{id_azienda}}</h1>
   </ion-content>
 </ion-view>

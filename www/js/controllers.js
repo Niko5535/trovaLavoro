@@ -2,7 +2,8 @@ angular.module('starter.controllers', [])
 
 .run(function($rootScope)
 {
-    $rootScope.id_azienda = 1 ;
+    $rootScope.id_azienda = 0 ;
+    $rootScope.loggato = false;
 })
 
 .factory('Offerte', function() {
@@ -18,7 +19,7 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('AppCtrl', function($scope, $ionicModal, $timeout)
+.controller('AppCtrl', function($scope, $ionicModal, $timeout , $http , $rootScope,$state)
 {
 
   // With the new view caching in Ionic, Controllers are only called
@@ -49,26 +50,56 @@ angular.module('starter.controllers', [])
   };
 
   // Perform the login action when the user submits the login form
-  $scope.doLogin = function() {
-    console.log('Doing login', $scope.loginData);
-    /////////////////////////////////////////////////////////////////////////////////////
+  $scope.doLogin = function()
+  {
+    if($scope.loginData.username == null || $scope.loginData.password == null)
+    {
+        window.alert('Inserisci tutti i campi');
+    }
+    else
+    {
+      var link = "http://trovalavoro.altervista.org/login.php?email_azienda=" + $scope.loginData.username + "&pass=" + $scope.loginData.password;
 
-    /////////////////////////////////////////////////////////////////////////////////////
+      $http.get(link,
+        {
+          params:
+          {
+            tabella: 'aziende'
+          }
+      }).then(function(response)
+      {
+          $scope.risposta = response.data;
+
+          if($scope.risposta == 0)
+          {
+            window.alert("E-mail o password errati");
+          }
+          else
+          {
+            window.alert("Login effettuato correttamente");
+            $rootScope.id_azienda = $scope.risposta;
+            $rootScope.loggato = true;
+            $state.go("app.laMiaAzienda");
+          }
+      }).catch(function(error)
+        {
+          console.log(error);
+        });
+    }
+
+
     // Simulate a login delay. Remove this and replace with your login
     // code if using a login system
     $timeout(function() {
       $scope.closeLogin();
     }, 1000);
   };
+
 })
-
-
-
-
 
 .controller('ListaOfferteCtrl', function($scope,$http,Offerte)
 {
-  var link = "http://company.altervista.org/select.php";
+  var link = "http://trovaLavoro.altervista.org/select.php";
 
   $http.get(link,
     {
@@ -106,28 +137,63 @@ angular.module('starter.controllers', [])
 
 .controller('registrazioneAziendaCtrl', function($scope, $stateParams, $http )
 {
-  function inserisci()
-  {
-    $http.post('http://trovalavoro.altervista.org/insert.php?').then();
-    //tabella=aziende&nome_azienda=prova1&descrizione=prova1&sede=lecce&partita_iva=12345678912
-  }
+    // var link = "http://trovaLavoro.altervista.org/select.php";
+    //
+    // $http.get(link,
+    //   {
+    //     params:
+    //     {
+    //       tabella: 'aziende'
+    //     }
+    //   }).then(function(response)
+    //   {
+    //     $scope.myWelcome = response.data.aziende;
+    //   }).catch(function(error)
+    //   {
+    //   console.log(error);
+    //   });
+
+
 })
 
-.controller('AziendaCtrl', function($scope, $stateParams, $http )
+.controller('AziendaCtrl', function($scope, $stateParams, $http ,$rootScope,$state)
 {
-  var link = "http://trovaLavoro.altervista.org/select.php";
-
-  $http.get(link,
-    {
-      params:
-      {
-        tabella: 'aziende'
-      }
-  }).then(function(response)
+  if($rootScope.loggato)
   {
-      $scope.myWelcome = response.data.aziende;
-  }).catch(function(error)
-    {
+    var link = "http://trovaLavoro.altervista.org/select.php";
+
+    $http.get(link,
+      {
+        params:
+        {
+          tabella: 'aziende'
+        }
+      }).then(function(response)
+      {
+        $scope.myWelcome = response.data.aziende;
+      }).catch(function(error)
+      {
       console.log(error);
-    });
+      });
+    }
+    else
+    {
+      $state.go("app.login");
+
+      var link = "http://trovaLavoro.altervista.org/select.php";
+
+      $http.get(link,
+        {
+          params:
+          {
+            tabella: 'aziende'
+          }
+        }).then(function(response)
+        {
+          $scope.myWelcome = response.data.aziende;
+        }).catch(function(error)
+        {
+        console.log(error);
+        });
+    }
 })
