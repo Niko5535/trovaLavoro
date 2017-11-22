@@ -1,9 +1,10 @@
 {
   "name": "myApp",
-  "app_id": "",
+  "app_id": "e5ec3ec5",
   "type": "ionic1",
   "integrations": {
-    "gulp": {}
+    "gulp": {},
+    "cordova": {}
   },
   "watchPatterns": [
     "scss/**/*",
