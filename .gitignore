@@ -50,3 +50,6 @@ www/templates/registrazioneAzienda.html
 www/templates/menu.html
 caricamento.php
 config.xml
+ionic.config.json
+package-lock.json
+package.json
