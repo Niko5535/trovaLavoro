@@ -76,7 +76,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     url: '/listaOfferte/:lavoroId',
     views: {
       'menuContent': {
-        templateUrl: 'templates/lavoro.html',
+        templateUrl: 'templates/annuncio.html',
         controller: 'LavoroCtrl'
       }
     }

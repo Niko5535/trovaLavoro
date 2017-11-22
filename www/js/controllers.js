@@ -141,21 +141,22 @@ angular.module('starter.controllers', [])
 
 .controller('registrazioneAziendaCtrl', function($scope, $stateParams, $http,)
 {
-    // var link = "http://trovaLavoro.altervista.org/select.php";
-    //
-    // $http.get(link,
-    //   {
-    //     params:
-    //     {
-    //       tabella: 'aziende'
-    //     }
-    //   }).then(function(response)
-    //   {
-    //     $scope.myWelcome = response.data.aziende;
-    //   }).catch(function(error)
-    //   {
-    //   console.log(error);
-    //   });
+     var link = "http://trovaLavoro.altervista.org/select.php";
+
+    $http.get(link,
+      {
+         params:
+       {
+          tabella: 'aziende'
+      }
+       }).then(function(response)
+     {
+        $scope.myWelcome = response.data.aziende;
+       }).catch(function(error)
+      {
+      console.log(error);
+      })
+
 
 
     // prelevo l'indirizzo locale dell'immagine da caricare
@@ -206,4 +207,4 @@ angular.module('starter.controllers', [])
         console.log(error);
         });
     }
-})
+});

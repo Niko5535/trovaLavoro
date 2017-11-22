@@ -53,3 +53,6 @@ config.xml
 ionic.config.json
 package-lock.json
 package.json
+resources/android/icon/drawable-hdpi-icon.png
+resources/android/icon/drawable-ldpi-icon.png
+resources/android/icon/drawable-mdpi-icon.png
