@@ -160,10 +160,10 @@ angular.module('starter.controllers', [])
 
 
     // prelevo l'indirizzo locale dell'immagine da caricare
-		immagine_da_caricare = document.getElementById('upload_immagine').value;
+		//immagine_da_caricare = document.getElementById('upload_immagine').value;
 		// swappo l'immagine presente con quella da caricare
 		// file:/// -> serve in particolare per firefox altrimenti non visualizza immagine
-		document.getElementById('anteprima_immagine').src = "#/"+immagine_da_caricare;
+		//document.getElementById('anteprima_immagine').src = "#/"+immagine_da_caricare;
 
 })
 
