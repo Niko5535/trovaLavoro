@@ -130,7 +130,22 @@ angular.module('starter.controllers', [])
 
 .controller('inserisciOffertaCtrl', function($scope, $stateParams, $http , Offerte)
 {
+  $scope.invia = function()
+  {
+    var link = "http://trovaLavoro.altervista.org/select.php?tabella=offerte&tipologia_lavoro=" + tipologia_lavoro + "&descrizione=" + descrizione + "&stipendio=" + stipendio + "&id_azienda=" + $rootScope.id_azienda;
+    $http.post(link).then(function(response)
+      {
+        $scope.myWelcome = response.data;
+      }).catch(function(error)
+      {
+      console.log(error);
+      });
 
+      if($scope.myWelcome == "y")
+      {
+        window.alert("fsdfsd");
+      }
+  }
 })
 
 .controller('HomeCtrl', function($scope, $stateParams, $http , $rootScope)
@@ -141,29 +156,6 @@ angular.module('starter.controllers', [])
 
 .controller('registrazioneAziendaCtrl', function($scope, $stateParams, $http,)
 {
-     var link = "http://trovaLavoro.altervista.org/select.php";
-
-    $http.get(link,
-      {
-         params:
-       {
-          tabella: 'aziende'
-      }
-       }).then(function(response)
-     {
-        $scope.myWelcome = response.data.aziende;
-       }).catch(function(error)
-      {
-      console.log(error);
-      })
-
-
-
-    // prelevo l'indirizzo locale dell'immagine da caricare
-		//immagine_da_caricare = document.getElementById('upload_immagine').value;
-		// swappo l'immagine presente con quella da caricare
-		// file:/// -> serve in particolare per firefox altrimenti non visualizza immagine
-		//document.getElementById('anteprima_immagine').src = "#/"+immagine_da_caricare;
 
 })
 
@@ -207,4 +199,4 @@ angular.module('starter.controllers', [])
         console.log(error);
         });
     }
-});
+})

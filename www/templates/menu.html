@@ -17,22 +17,10 @@
     <ion-header-bar class="bar-menu" >
       <h1 class="title">Menù</h1>
     </ion-header-bar >
-
-    <ion-header-bar class="bar-menu" >
-      <h1 class="title">
-        <i class="  ion-social-android"style="padding:15%;"></i>Menù <i class="  ion-social-apple" style="padding:16%;" /></i></h1>
-    </ion-header-bar >
-
-
     <ion-content >
-
-        <ion-item style="background-color: #203360; color:white;">
-            Buongiorno {{myWelcome[id_azienda - 1].nome_azienda}} !
-      </ion-item>
 
 
       <ion-item menu-close href="#/app/home">
-
 
         Home
         <i class="icon ion-home" style="padding-left: 75%;"></i>
@@ -40,8 +28,7 @@
 </ion-item>
 
 
-
-      <ion-list >
+      <ion-list style="background-color:red">
 
       <ion-item menu-close ng-click="goLogin()" style="padding-left:6%;">
           Login
@@ -54,13 +41,6 @@
           Offerte di lavoro
         <i class="ion-navigate" style="padding-left: 40%;"> </i>
         </ion-item>
-
-
-        <ion-item menu-close href="#/app/registrazioneAzienda">
-                  Registra la tua azienda!
-
-        </ion-item>
-        
 
         <ion-item menu-close href="#/app/laMiaAzienda">
           La Mia Azienda
