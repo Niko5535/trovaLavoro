@@ -13,7 +13,7 @@
     </div>
 
     <ion-list >
-      <ion-item id="divliste" ng-repeat="x in myWelcome | filter :cerca" href="#/app/listaOfferte/{{x.id_offerta}};">
+      <ion-item id="divliste" ng-repeat="x in offerte | filter :cerca" href="#/app/listaOfferte/{{x.id_offerta}}">
         <h2 id="titoloLavoro">{{x.tipologia_lavoro}}</h2><br>
         <div>
           <p class="serif"> Descrizione:</p>
@@ -21,10 +21,11 @@
         </div>
         <div>
           <p class="serif">Data:</p>
-          <p class="Sans-serif_1">{{x.data}}</p>
+          <p class="Sans-serif_1">{{x.data}}</p>{{x.azienda}}
         </div>
       </ion-item>
     </ion-list>
+
   </ion-content>
   <div class="tabs-striped tabs-icon-top">
     <div class="tabs">
