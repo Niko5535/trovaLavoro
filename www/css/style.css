@@ -12,6 +12,13 @@
      text-transform: uppercase;
 }
 
+
+.immagine_annuncio{
+  width: 200px;
+  height: 100px;
+}
+
+
 /*Titolo barra centrale personalizzazione*/
 
 i{ /*Icone menu*/
@@ -114,7 +121,7 @@ font-weight: bold;
 }
 .sinistra i{
   font-weight: normal;
-  
+
 }
 
 
