@@ -19,9 +19,9 @@ angular.module('starter.controllers', [])
   };
 })
 
+
 .controller('AppCtrl', function($scope, $ionicModal, $timeout , $http , $rootScope,$state)
 {
-
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
   // To listen for when this page is active (for example, to refresh data),
@@ -29,6 +29,10 @@ angular.module('starter.controllers', [])
   //$scope.$on('$ionicView.enter', function(e) {
   //});
 
+  $scope.goLogin = function()
+  {
+    $state.go("app.Login");
+  }
   // Form data for the login modal
   $scope.loginData = {};
 
@@ -135,7 +139,7 @@ angular.module('starter.controllers', [])
 })
 //////////
 
-.controller('registrazioneAziendaCtrl', function($scope, $stateParams, $http )
+.controller('registrazioneAziendaCtrl', function($scope, $stateParams, $http,)
 {
     // var link = "http://trovaLavoro.altervista.org/select.php";
     //
@@ -153,6 +157,12 @@ angular.module('starter.controllers', [])
     //   console.log(error);
     //   });
 
+
+    // prelevo l'indirizzo locale dell'immagine da caricare
+		immagine_da_caricare = document.getElementById('upload_immagine').value;
+		// swappo l'immagine presente con quella da caricare
+		// file:/// -> serve in particolare per firefox altrimenti non visualizza immagine
+		document.getElementById('anteprima_immagine').src = "#/"+immagine_da_caricare;
 
 })
 
@@ -178,7 +188,7 @@ angular.module('starter.controllers', [])
     }
     else
     {
-      $state.go("app.login");
+      $state.go("app.Login");
 
       var link = "http://trovaLavoro.altervista.org/select.php";
 
