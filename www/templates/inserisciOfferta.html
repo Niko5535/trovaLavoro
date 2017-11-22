@@ -1,13 +1,13 @@
 
 <ion-view view-title="Inserisci l'offerta">
 
-<form method="get" action="http://trovalavoro.altervista.org/insert.php?tabella=offerte">
+<form method="post" action="http://trovalavoro.altervista.org/insertfinito.php?">
   <ion-content>
     <input type="hidden" name="tabella" value="offerte">
 <div class="list">
   <label class="item item-input item-stacked-label">
     <span class="input-label">Tipologia di impiego</span>
-    <input type="text" placeholder="Inserisci la tipologia di impiego" name="tipologia_impiego">
+    <input type="text" placeholder="Inserisci la tipologia di impiego" name="tipologia_lavoro">
   </label>
   <label class="item item-input item-stacked-label">
     <span class="input-label">Descrizione del lavoro</span>
@@ -17,13 +17,14 @@
   <label class="item item-input item-stacked-label">
     <span class="input-label">Retribuzione mensile :</span>
     <input type="text" placeholder="Inserisci la retribuzione mensile" name="stipendio" >
+        <input type="hidden" name="id_azienda" value="{{id_azienda}}">
   </label>
 
-<button class="button button-block button-positive" type="submit">Inserisciii!</button>
+<button class="button button-block button-positive" type="submit" ng-click="cambia()">Inserisci!</button>
 
 </form>
 </ion-content>
-<div class="tabs-striped tabs-icon-top">
+<div class="tabs-striped tabs-icon-top" style="padding-top:99%">
   <div class="tabs">
     <a class="tab-item active" href="#/app/home">
       <i class="icon ion-home"></i>
