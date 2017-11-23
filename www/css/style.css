@@ -139,7 +139,7 @@ color: white;
 .registrati{
 
   color:  #203360;
-  
+
 }
 
 .imgHome{
@@ -285,12 +285,32 @@ font-weight: bold;
 
 #divliste
 {
+background-color: blue;
 
 
-
-    opacity:0.72;
+    opacity:0.82;
 }
+div.item.item-avatar{
+  font-weight: bold;
+height: 20%;
 
+width: 110% !important;
+
+
+
+  }
+
+  div.item.item-body {
+height: 80%!important;
+  }
+
+a.item-content{
+  padding: 1% !important;
+  font-weight: bold;
+  border-color: black;
+  border-width: 1px;
+
+}
 p.serif
 {
     text-shadow: 1px 0px black;
