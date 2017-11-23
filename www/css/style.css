@@ -18,6 +18,11 @@ img.buongiorno{
       border-radius: 100%;
 }
 
+.ion-social-android:before {
+    content: "";
+    color: greenyellow;
+}
+
 .immagine_annuncio{
   width: 200px;
   height: 100px;
