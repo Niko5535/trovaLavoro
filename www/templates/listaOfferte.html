@@ -1,6 +1,11 @@
 <ion-view view-title="Lista offerte di lavoro">
 
+
   <ion-content class="imgLista">
+     <ion-refresher
+         pulling-text="Pull to refresh..."
+         on-refresh="doRefresh()"></ion-refresher>
+
 
     <div class="bar bar-header item-input-inset">
         <label class="item-input-wrapper">
@@ -10,9 +15,12 @@
         <button class="button button-clear">
           Cancel
         </button>
-    </div> 
+    </div>
+
 
     <ion-list >
+
+
       <ion-item id="divliste" ng-repeat="x in offerte | filter :cerca" href="#/app/listaOfferte/{{x.id_offerta}}">
         <h2 id="titoloLavoro">{{x.tipologia_lavoro}}</h2><br>
         <div>
@@ -24,7 +32,11 @@
           <p class="Sans-serif_1">{{x.data}}</p>{{x.azienda}}
         </div>
       </ion-item>
+
     </ion-list>
+
+
+
 
   </ion-content>
   <div class="tabs-striped tabs-icon-top">
@@ -48,6 +60,7 @@
       </a>
     </div>
   </div>
+
 
 </ion-view>
 
