@@ -164,12 +164,12 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('inserisciOffertaCtrl', function($scope, $stateParams, $http , Offerte , $rootScope)
+.controller('inserisciOffertaCtrl', function($scope, $stateParams, $http , Offerte , $rootScope,$state)
 {
   $scope.cambia = function()
   {
 
-    $state.go("app.laMiaAzienda");
+    window.location.replace("#/app/ListaOfferte");
 
   }
 })
