@@ -168,8 +168,9 @@ angular.module('starter.controllers', [])
 {
   $scope.cambia = function()
   {
-    window.alert("dio");
+
     $state.go("app.laMiaAzienda");
+
   }
 })
 
@@ -178,12 +179,14 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('registrazioneAziendaCtrl', function($scope, $stateParams, $http,)
+.controller('registrazioneAziendaCtrl', function($scope, $stateParams, $http, $rootScope,$state)
 {
   $scope.cambia = function()
   {
-    console.log("dio");
-    window.location.replace("#/app/laMiaAzienda");
+
+     $rootScope.loggato=true;
+     $rootScope.id_azienda = 1;
+     $state.go('app.laMiaAzienda');
   }
 })
 

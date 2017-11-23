@@ -2,7 +2,7 @@
 
 
 
-<form name="insert" method="post" action="http://trovalavoro.altervista.org/insertfinito.php?" enctype="multipart/form-data">>
+<form name="insert" method="post" action="http://trovalavoro.altervista.org/insertfinito.php" target="hidden_iframe" enctype="multipart/form-data">>
   <ion-content>
     <input type="hidden" name="tabella" value="aziende">
 
@@ -16,7 +16,7 @@
   </label>
 
   <label class="item item-input item-stacked-label">
-    <span class="input-label">Descrizione sul campo di applicazione dell'azienda</span>
+    <span class="input-label">Descrizione sul campo di applicazione <br> dell'azienda</span>
     <input type="text"  placeholder="Descrivi le attività che svolge l'azienda" name="descrizione" >
   </label>
 
@@ -183,6 +183,8 @@
 <br>
 <br>
 </form> <!--Fine acquisizione dati-->
+
+<iframe name="hidden_iframe" style="visibility:hidden"></iframe>
 
 </ion-content>
 <div class="tabs-striped tabs-icon-top">
