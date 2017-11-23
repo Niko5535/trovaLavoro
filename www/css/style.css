@@ -11,7 +11,12 @@
      text-shadow: 1px 1px 0.5px black;
      text-transform: uppercase;
 }
-
+img.buongiorno{
+  width: 60px!important;
+      object-fit: cover;
+      height: 60px!important;
+      border-radius: 100%;
+}
 
 .immagine_annuncio{
   width: 200px;
