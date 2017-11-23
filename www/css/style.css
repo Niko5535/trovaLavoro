@@ -1,4 +1,11 @@
 /* Empty. Add your own CSS if you like */
+
+.padd{
+  font-size: 70%;
+  float:right;
+  padding-right:10px;
+}
+
 #titoloLavoro
 {
   color:blue;
@@ -107,11 +114,6 @@ border-color: #203360;
 }
 
 
-
-div.title.title-left.header-item{
-  left: 0px !important;
-
-}
 
 
 #button{
