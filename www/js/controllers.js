@@ -95,6 +95,7 @@ angular.module('starter.controllers', [])
           {
             window.alert("Login effettuato correttamente");
             $rootScope.id_azienda = $scope.risposta;
+            console.log($rootScope.id_azienda);
             $rootScope.loggato = true;
             $state.go("app.laMiaAzienda");
           }
