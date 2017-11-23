@@ -19,6 +19,19 @@ angular.module('starter.controllers', [])
   };
 })
 
+.factory('IdAzienda', function() {
+  var IdAzienda = {};
+  return{
+    getID:function(){
+      return IdAzienda;
+    },
+    setID: function(param)
+    {
+      IdAzienda = param;
+    }
+  };
+})
+
 
 .controller('AppCtrl', function($scope, $ionicModal, $timeout , $http , $rootScope,$state)
 {
@@ -123,20 +136,32 @@ angular.module('starter.controllers', [])
 
 })
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-.controller('LavoroCtrl', function($scope, $stateParams, $http , Offerte )
+.controller('LavoroCtrl', function($scope, $stateParams, $http )
 {
       $scope.lin = $stateParams.lavoroId;
-      $scope.offerta = Offerte.getOfferte();
+      $scope.idAzienda = 0;
+
+      var linkAzienda = "http://trovaLavoro.altervista.org/selectOfferta.php?id=" ;
+      $http.get(linkAzienda + $scope.lin).then(function(response)
+      {
+          $scope.offerta = response.data.offerte[0];
+
+          var linkAzienda = "http://trovaLavoro.altervista.org/offertePerAzienda.php?id="+ $scope.offerta.azienda;
+          $http.get(linkAzienda).then(function(response)
+          {
+            $scope.datiAzienda = response.data.aziende[0];
+          }).catch(function(error)
+            {
+              console.log(error);
+            });
+
+      }).catch(function(error)
+      {
+        console.log(error);
+      });
 
 
-         var linkAzienda = "http://trovaLavoro.altervista.org/offertePerAzienda.php?id=" ;
-       $http.get(linkAzienda + $scope.offerte[$scope.lin].azienda).then(function(response)
-       {
-           $scope.datiAzienda = response.data.aziende;
-       }).catch(function(error)
-         {
-           console.log(error);
-         });
+
 })
 
 .controller('inserisciOffertaCtrl', function($scope, $stateParams, $http , Offerte , $rootScope)
