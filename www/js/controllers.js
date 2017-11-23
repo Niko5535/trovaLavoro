@@ -114,7 +114,7 @@ angular.module('starter.controllers', [])
   }).then(function(response)
   {
       Offerte.setOfferte(response.data.offerte);
-      $scope.offerte = response.data.offerte;
+      $scope.offerte = Offerte.getOfferte();
   }).catch(function(error)
     {
       console.log(error);
@@ -125,18 +125,18 @@ angular.module('starter.controllers', [])
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 .controller('LavoroCtrl', function($scope, $stateParams, $http , Offerte )
 {
-    $scope.lin = $stateParams.lavoroId;
-    $scope.offerte = Offerte.getOfferte();
+      $scope.lin = $stateParams.lavoroId;
+      $scope.offerta = Offerte.getOfferte();
 
 
-        var linkAzienda = "http://trovaLavoro.altervista.org/offertePerAzienda.php?id=" + $scope.offerte[$scope.lin].azienda;
-      $http.get(linkAzienda).then(function(response)
-      {
-          $scope.azienda = response.data.aziende;
-      }).catch(function(error)
-        {
-          console.log(error);
-        });
+         var linkAzienda = "http://trovaLavoro.altervista.org/offertePerAzienda.php?id=" ;
+       $http.get(linkAzienda + $scope.offerte[$scope.lin].azienda).then(function(response)
+       {
+           $scope.datiAzienda = response.data.aziende;
+       }).catch(function(error)
+         {
+           console.log(error);
+         });
 })
 
 .controller('inserisciOffertaCtrl', function($scope, $stateParams, $http , Offerte , $rootScope)
