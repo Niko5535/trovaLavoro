@@ -19,29 +19,7 @@
 
 
       <ion-item id="divliste" ng-repeat="x in offerte | filter :cerca" href="#/app/listaOfferte/{{x.id_offerta}}">
-
-
-
-        <div class="list card">
-
-          <div class="item item-avatar">
-            <img src="www.trovalavoro.altervista.org/uploads/{{myWelcome[id_azienda - 1].immagine_azienda}}">
-            <h2>{{x.tipologia_lavoro}}<h2>
-            <p>{{x.data}}</p>
-          </div>
-
-          <div class="item item-body">
-
-            <p>
-              {{x.descrizione}}
-            </p>
-            <p>
-
-            </p>
-          </div>
-
-        </div>
-        <!-- <h2 id="titoloLavoro">{{x.tipologia_lavoro}}</h2><br>
+        <h2 id="titoloLavoro">{{x.tipologia_lavoro}}</h2><br>
         <div>
           <p class="serif"> Descrizione:</p>
           <p class="Sans-serif">{{x.descrizione}}</p>
@@ -50,28 +28,10 @@
           <p class="serif">Data:</p>
           <p class="Sans-serif_1">{{x.data}}</p>{{x.azienda}}
         </div>
-      </ion-item> -->
+      </ion-item>
 
     </ion-list>
-    <!-- <div class="list card">
 
-      <div class="item item-avatar">
-        <img src="www.trovalavoro.altervista.org/uploads/{{myWelcome[id_azienda - 1].immagine_azienda}}">
-        <h2>{{x.tipologia_lavoro}}<h2>
-        <p>{{x.data}}</p>
-      </div>
-
-      <div class="item item-body">
-
-        <p>
-          {{x.descrizione}}
-        </p>
-        <p>
-
-        </p>
-      </div>
-
-    </div> -->
 
 
 

@@ -95,7 +95,6 @@ angular.module('starter.controllers', [])
           {
             window.alert("Login effettuato correttamente");
             $rootScope.id_azienda = $scope.risposta;
-            console.log($rootScope.id_azienda);
             $rootScope.loggato = true;
             $state.go("app.laMiaAzienda");
           }
@@ -165,12 +164,12 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('inserisciOffertaCtrl', function($scope, $stateParams, $http , Offerte , $rootScope,$state)
+.controller('inserisciOffertaCtrl', function($scope, $stateParams, $http , Offerte , $rootScope)
 {
   $scope.cambia = function()
   {
 
-    window.location.replace("#/app/ListaOfferte");
+    $state.go("app.laMiaAzienda");
 
   }
 })
