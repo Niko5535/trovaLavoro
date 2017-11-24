@@ -1,9 +1,11 @@
 
 <ion-view view-title="Inserisci l'offerta">
 
-<form method="post" action="http://trovalavoro.altervista.org/insertfinito.php?">
+<form method="post" action="http://trovalavoro.altervista.org/insertfinito.php" target="hidden_iframe">
   <ion-content>
     <input type="hidden" name="tabella" value="offerte">
+
+
 <div class="list">
   <label class="item item-input item-stacked-label">
     <span class="input-label">Tipologia di impiego</span>
@@ -24,6 +26,11 @@
 
 </form>
 </ion-content>
+
+
+<iframe name="hidden_iframe" style="visibility:hidden"></iframe>
+
+
 <div class="tabs-striped tabs-icon-top" style="padding-top:99%">
   <div class="tabs">
     <a class="tab-item active" href="#/app/home">
